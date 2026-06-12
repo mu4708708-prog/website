@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Engineer Portfolio & Access</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Ionicons Script (Modern Differential Loading) -->
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <!-- Fixed Navigation Bar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <h2 class="logo">Uzair</h2>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education-experience">Journey</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Credentials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            <input class="srch" type="search" placeholder="Search portfolio...">
+            <button class="btn" aria-label="Search">Search</button>
+        </div>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-wrapper">
+        <!-- Hero Section (Home) -->
+        <section id="home" class="hero-section">
+            <div class="content-wrapper">
+                <div class="content">
+                    <span class="subtitle">Welcome to my portfolio</span>
+                    <h1>Muhammad <br><span>Uzair</span></h1>
+                    <p class="par">
+                        Electrical Engineering graduate with practical experience in instrumentation, control systems, system design, embedded electronics, and industrial automation. Worked on multiple academic and hands-on projects involving microcontrollers, simulation tools, and machine learning-based applications.
+                    </p>
+                    <a href="#contact" class="cn">Get In Touch</a>
+                </div>
+
+                <div class="login-card">
+                    <h2>Login Here</h2>
+                    <div class="form-inputs">
+                        <div class="input-group">
+                            <input type="email" required placeholder="Enter Email Here">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" required placeholder="Enter Password Here">
+                        </div>
+                    </div>
+                    <button class="btnn">Login</button>
+
+                    <p class="link">Don't have an account?<br>
+                        <a href="#">Sign up here</a>
+                    </p>
+                    <p class="liw">Or log in with</p>
+
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/Muhammad-uzair863568253" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="mailto:mu4708708@gmail.com" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="sec-padding">
+            <div class="sec-container">
+                <div class="sec-header">
+                    <span class="sec-subtitle">Who I Am</span>
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-info">
+                        <h3>Engineering Smart & Autonomous Solutions</h3>
+                        <p>I am an Electrical Engineering graduate specializing in instrumentation, control systems, embedded systems, and industrial automation. I have hands-on experience designing smart systems that combine robust hardware circuits with intelligent software logic.</p>
+                        <p>My goal is to develop fault-tolerant sensor systems, IoT automation frameworks, and power electronic converters that address complex industrial and safety challenges.</p>
+                        <div class="about-stats">
+                            <div class="stat-box">
+                                <h4>2</h4>
+                                <p>Internships</p>
+                            </div>
+                            <div class="stat-box">
+                                <h4>10+</h4>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat-box">
+                                <h4>3+</h4>
+                                <p>Certifications</p>
+                            </div>
+                        </div>
+                        <a href="mailto:mu4708708@gmail.com" class="cn resume-btn"><ion-icon name="cloud-download-outline"></ion-icon> Get CV / Email Me</a>
+                    </div>
+                    <div class="about-graphics">
+                        <div class="graphics-card">
+                            <div class="circuit-icon"><ion-icon name="hardware-chip-outline"></ion-icon></div>
+                            <h4>Embedded Hardware</h4>
+                            <p>Circuit design, schematic capture, & PCB prototyping in Proteus/Multisim</p>
+                        </div>
+                        <div class="graphics-card">
+                            <div class="circuit-icon"><ion-icon name="code-slash-outline"></ion-icon></div>
+                            <h4>Industrial Automation</h4>
+                            <p>PLC programming, SCADA/HMI design, & instrumentation control</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Experience Timeline Section -->
+        <section id="education-experience" class="sec-padding bg-alt">
+            <div class="sec-container">
+                <div class="sec-header">
+                    <span class="sec-subtitle">My Credentials</span>
+                    <h2>Career Journey</h2>
+                </div>
+                
+                <div class="timeline-toggle-wrapper">
+                    <button class="timeline-btn active" data-target="experience-content">Professional Experience</button>
+                    <button class="timeline-btn" data-target="education-content">Education Background</button>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <!-- Experience content -->
+                    <div id="experience-content" class="timeline-content active">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-detail">
+                                <span class="time-period">July 2025 (4 Weeks)</span>
+                                <h3>Electrical Intern</h3>
+                                <h4 class="company-name">Shaukat Khanum Memorial Cancer Hospital and Research Centre</h4>
+                                <p>Assisted in the maintenance and troubleshooting of laboratory machines and electrical systems. Gained practical exposure to instrumentation, preventive maintenance, calibration procedures, and laboratory safety standards in Lahore, Pakistan.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-detail">
+                                <span class="time-period">June 2025 (4 Weeks)</span>
+                                <h3>Electrical & Instrumentation Intern</h3>
+                                <h4 class="company-name">Ibrahim Fiber Limited</h4>
+                                <p>Assisted in the installation, calibration, and maintenance of industrial instruments. Gained practical exposure to control systems, sensors, and signal transmitters in Faisalabad, Pakistan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education content -->
+                    <div id="education-content" class="timeline-content">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-detail">
+                                <span class="time-period">2022 - 2026</span>
+                                <h3>Bachelor of Electrical Engineering</h3>
+                                <h4 class="company-name">National University of Computer & Emerging Sciences (FAST)</h4>
+                                <p>Chiniot-Faisalabad Campus, Pakistan. Studied core engineering subjects with hands-on labs. Active in societies and project exhibitions.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-detail">
+                                <span class="time-period">2020 - 2022</span>
+                                <h3>F.Sc (Pre-Engineering)</h3>
+                                <h4 class="company-name">Government Post Graduate College, Sahiwal</h4>
+                                <p>Sahiwal, Punjab, Pakistan. Completed secondary pre-engineering education with focus on Physics, Chemistry, and Mathematics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="sec-padding">
+            <div class="sec-container">
+                <div class="sec-header">
+                    <span class="sec-subtitle">Expertise Levels</span>
+                    <h2>Technical Skills</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Circular Skills -->
+                    <div class="skills-circular-column">
+                        <h3>Core Focus Areas</h3>
+                        <div class="circular-skills-container">
+                            <div class="circle-skill">
+                                <div class="circle-progress" data-percent="90">
+                                    <svg>
+                                        <circle cx="60" cy="60" r="50" class="bg"></circle>
+                                        <circle cx="60" cy="60" r="50" class="progress"></circle>
+                                    </svg>
+                                    <div class="percent">90%</div>
+                                </div>
+                                <span>Embedded & IoT</span>
+                            </div>
+                            <div class="circle-skill">
+                                <div class="circle-progress" data-percent="85">
+                                    <svg>
+                                        <circle cx="60" cy="60" r="50" class="bg"></circle>
+                                        <circle cx="60" cy="60" r="50" class="progress"></circle>
+                                    </svg>
+                                    <div class="percent">85%</div>
+                                </div>
+                                <span>PLC / SCADA</span>
+                            </div>
+                            <div class="circle-skill">
+                                <div class="circle-progress" data-percent="88">
+                                    <svg>
+                                        <circle cx="60" cy="60" r="50" class="bg"></circle>
+                                        <circle cx="60" cy="60" r="50" class="progress"></circle>
+                                    </svg>
+                                    <div class="percent">88%</div>
+                                </div>
+                                <span>Circuit Design</span>
+                            </div>
+                            <div class="circle-skill">
+                                <div class="circle-progress" data-percent="92">
+                                    <svg>
+                                        <circle cx="60" cy="60" r="50" class="bg"></circle>
+                                        <circle cx="60" cy="60" r="50" class="progress"></circle>
+                                    </svg>
+                                    <div class="percent">92%</div>
+                                </div>
+                                <span>Instruments & Sensors</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Horizontal Skills -->
+                    <div class="skills-horizontal-column">
+                        <h3>Domain Engineering Tools</h3>
+                        <div class="skills-bar-container">
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span>AutoCAD & MATLAB</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-line"><span data-value="90"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span>Proteus & Multisim (Circuit Design)</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="progress-line"><span data-value="88"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span>TIA Portal & LabVIEW (Automation)</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-line"><span data-value="85"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span>Arduino IDE, Vivado & VS Code</span>
+                                    <span>92%</span>
+                                </div>
+                                <div class="progress-line"><span data-value="92"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="sec-padding bg-alt">
+            <div class="sec-container">
+                <div class="sec-header">
+                    <span class="sec-subtitle">My Specializations</span>
+                    <h2>Engineering Services</h2>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><ion-icon name="hardware-chip-outline"></ion-icon></div>
+                        <h3>Embedded Hardware</h3>
+                        <p>Designing custom schematics, prototyping circuits using Proteus/Multisim, and developing firmware for ESP32 and Arduino.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><ion-icon name="settings-outline"></ion-icon></div>
+                        <h3>PLC & HMI Programming</h3>
+                        <p>Developing industrial automation sequences, traffic control logics, and custom touchscreen HMI screens using TIA Portal.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><ion-icon name="wifi-outline"></ion-icon></div>
+                        <h3>IoT & Sensor Integration</h3>
+                        <p>Implementing remote telemetry nodes (e.g. water level monitoring and air quality sensing) using ESP32, WiFi, and sensor networks.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><ion-icon name="shield-checkmark-outline"></ion-icon></div>
+                        <h3>Fault-Tolerant Systems</h3>
+                        <p>Integrating machine learning algorithms for real-time sensor fault detection, isolation, and compensation to reduce downtime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="sec-padding">
+            <div class="sec-container">
+                <div class="sec-header">
+                    <span class="sec-subtitle">Recent Tasks</span>
+                    <h2>Featured Projects</h2>
+                </div>
+
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="automation">Automation</button>
+                    <button class="filter-btn" data-filter="embedded">Embedded/IoT</button>
+                    <button class="filter-btn" data-filter="power">Power Electronics</button>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card" data-category="automation">
+                        <div class="project-img">
+                            <img src="image.jpg" alt="Intelligent Fault-Tolerant Sensor Assembly">
+                            <div class="project-overlay">
+                                <a href="#" class="view-details" data-project-id="p1">View Specs</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Embedded & ML</span>
+                            <h3>Intelligent Fault-Tolerant Sensor Assembly (IFTSA)</h3>
+                            <p>Smart sensor system that detects, isolates, and compensates for sensor faults in real-time using machine learning.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="embedded">
+                        <div class="project-img">
+                            <img src="image.jpg" alt="IoT Water Level Monitor">
+                            <div class="project-overlay">
+                                <a href="#" class="view-details" data-project-id="p2">View Specs</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Embedded IoT</span>
+                            <h3>IoT Water Level Monitor</h3>
+                            <p>Remote water level monitoring system using ESP32, an ultrasonic sensor, and wireless telemetry data streaming.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="power">
+                        <div class="project-img">
+                            <img src="image.jpg" alt="DC-DC Boost Converter">
+                            <div class="project-overlay">
+                                <a href="#" class="view-details" data-project-id="p3">View Specs</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Power Electronics</span>
+                            <h3>DC-DC Boost Converter</h3>
+                            <p>Microcontroller-controlled boost converter with real-time feedback loop regulation designed in Proteus/MATLAB.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="automation">
+                        <div class="project-img">
+                            <img src="image.jpg" alt="Traffic Light Control System">
+                            <div class="project-overlay">
+                                <a href="#" class="view-details" data-project-id="p4">View Specs</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">PLC & HMI</span>
+                            <h3>Traffic Light Control System</h3>
+                            <p>Industrial junction traffic controller programmed with PLC ladders and HMI interface in TIA Portal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="sec-padding bg-alt">
+            <div class="sec-container">
+                <div class="sec-header">
+                    <span class="sec-subtitle">Quality Benchmarks</span>
+                    <h2>Professional Credentials</h2>
+                </div>
+
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                        <div class="cert-info">
+                            <h3>Instrumentation & Control</h3>
+                            <p>Industrial Automation Control - Inst Tools</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><ion-icon name="people-outline"></ion-icon></div>
+                        <div class="cert-info">
+                            <h3>IEEE Executive Member</h3>
+                            <p>IEEE Student Branch - FAST CFD</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><ion-icon name="trophy-outline"></ion-icon></div>
+                        <div class="cert-info">
+                            <h3>Speed Wiring Winner</h3>
+                            <p>IEEE Speed Wiring Competition 2024</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><ion-icon name="school-outline"></ion-icon></div>
+                        <div class="cert-info">
+                            <h3>Bachelor of Electrical Engineering</h3>
+                            <p>FAST University (2022 - 2026)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="sec-padding">
+            <div class="sec-container">
+                <div class="sec-header">
+                    <span class="sec-subtitle">Reach Out</span>
+                    <h2>Contact Me</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <h3>Let's Collaborate</h3>
+                        <p>Discuss projects, career opportunities, or technical inquiries. Reach out to me through any of the channels below.</p>
+                        
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <div>
+                                    <h4>Email Me</h4>
+                                    <p><a href="mailto:mu4708708@gmail.com" class="contact-link">mu4708708@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <ion-icon name="call-outline"></ion-icon>
+                                <div>
+                                    <h4>Call Me</h4>
+                                    <p><a href="tel:+923188822143" class="contact-link">+92-318-8822143</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <p><a href="https://linkedin.com/in/Muhammad-uzair863568253" target="_blank" rel="noopener noreferrer" class="contact-link">Muhammad Uzair</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Faisalabad, Punjab, Pakistan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrap">
+                        <form id="contact-form">
+                            <div class="form-row">
+                                <div class="form-input-group">
+                                    <input type="text" id="contact-name" placeholder="Full Name" required>
+                                    <ion-icon class="status-icon" name="checkmark-circle"></ion-icon>
+                                </div>
+                                <div class="form-input-group">
+                                    <input type="email" id="contact-email" placeholder="Email Address" required>
+                                    <ion-icon class="status-icon" name="checkmark-circle"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="form-input-group">
+                                <input type="text" id="contact-subject" placeholder="Subject" required>
+                                <ion-icon class="status-icon" name="checkmark-circle"></ion-icon>
+                            </div>
+                            <div class="form-input-group">
+                                <textarea id="contact-message" placeholder="Message Details" rows="6" required></textarea>
+                                <ion-icon class="status-icon" name="checkmark-circle"></ion-icon>
+                            </div>
+                            <button type="submit" class="form-submit-btn">Send Transmission</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Details Modal Lightbox -->
+    <div id="details-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal"><ion-icon name="close"></ion-icon></button>
+            <div id="modal-details-body">
+                <!-- Loaded dynamically by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Client Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
