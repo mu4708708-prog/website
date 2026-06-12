@@ -609,12 +609,12 @@ function initContactForm() {
             submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
 
-            // Collect form values
+            // Collect form values - matching EmailJS template variables exactly
             const templateParams = {
-                from_name:  document.getElementById('contact-name').value.trim(),
-                from_email: document.getElementById('contact-email').value.trim(),
-                subject:    document.getElementById('contact-subject').value.trim(),
-                message:    document.getElementById('contact-message').value.trim(),
+                name:    document.getElementById('contact-name').value.trim(),
+                email:   document.getElementById('contact-email').value.trim(),
+                title:   document.getElementById('contact-subject').value.trim(),
+                message: document.getElementById('contact-message').value.trim(),
             };
 
             // Send via EmailJS
