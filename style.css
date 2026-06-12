@@ -1177,6 +1177,53 @@ body {
     color: var(--text-muted);
 }
 
+/* EmailJS error message styling */
+.contact-error-msg {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: rgba(231, 76, 60, 0.08);
+    border: 1px solid rgba(231, 76, 60, 0.25);
+    border-radius: var(--border-radius);
+    padding: 14px 16px;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.contact-error-msg ion-icon {
+    font-size: 22px;
+    color: #e74c3c;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contact-error-msg p {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.contact-error-msg a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.contact-error-msg a:hover {
+    text-decoration: underline;
+}
+
+/* Clickable contact info links */
+.contact-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-link:hover {
+    color: var(--primary);
+}
+
 /* ==========================================================================
    Details Modal Lightbox
    ========================================================================== */

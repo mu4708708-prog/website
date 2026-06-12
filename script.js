@@ -577,9 +577,12 @@ function initAuthPortal() {
 }
 
 /* ==========================================================================
-   8. Contact Form Validator
+   8. Contact Form with EmailJS Integration
    ========================================================================== */
 function initContactForm() {
+    // Initialize EmailJS with Public Key
+    emailjs.init('gGj7hvgfjovBvq3pC');
+
     const contactForm = document.getElementById('contact-form');
     if (!contactForm) return;
 
@@ -593,7 +596,7 @@ function initContactForm() {
 
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         let allValid = true;
         inputs.forEach((input) => {
             if (!validateField(input)) {
@@ -603,21 +606,47 @@ function initContactForm() {
 
         if (allValid) {
             const submitBtn = contactForm.querySelector('.form-submit-btn');
-            const origText = submitBtn.innerText;
-            submitBtn.innerText = "Transmitting...";
+            submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                // Show success visual feedback
-                const successDiv = document.createElement('div');
-                successDiv.className = 'contact-success-msg';
-                successDiv.innerHTML = `
-                    <ion-icon name="checkmark-circle"></ion-icon>
-                    <p>Transmission Successful! I will get in touch with you shortly.</p>
-                `;
-                contactForm.innerHTML = '';
-                contactForm.appendChild(successDiv);
-            }, 1500);
+            // Collect form values
+            const templateParams = {
+                from_name:  document.getElementById('contact-name').value.trim(),
+                from_email: document.getElementById('contact-email').value.trim(),
+                subject:    document.getElementById('contact-subject').value.trim(),
+                message:    document.getElementById('contact-message').value.trim(),
+            };
+
+            // Send via EmailJS
+            emailjs.send('service_ujmbe9l', 'template_6ciyx9j', templateParams)
+                .then(() => {
+                    // Success — show confirmation message
+                    const successDiv = document.createElement('div');
+                    successDiv.className = 'contact-success-msg';
+                    successDiv.innerHTML = `
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <p>Message Sent Successfully! I will get back to you shortly.</p>
+                    `;
+                    contactForm.innerHTML = '';
+                    contactForm.appendChild(successDiv);
+                })
+                .catch((error) => {
+                    // Failure — show error and re-enable button
+                    console.error('EmailJS Error:', error);
+                    submitBtn.innerText = 'Send Message';
+                    submitBtn.disabled = false;
+
+                    const errorDiv = document.createElement('div');
+                    errorDiv.className = 'contact-error-msg';
+                    errorDiv.innerHTML = `
+                        <ion-icon name="close-circle"></ion-icon>
+                        <p>Oops! Something went wrong. Please try again or email me directly at <a href="mailto:mu4708708@gmail.com">mu4708708@gmail.com</a></p>
+                    `;
+                    // Insert error above button
+                    const existingError = contactForm.querySelector('.contact-error-msg');
+                    if (existingError) existingError.remove();
+                    submitBtn.insertAdjacentElement('beforebegin', errorDiv);
+                });
         }
     });
 
