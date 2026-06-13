@@ -682,111 +682,96 @@ function initLiveSearch() {
 
     if (!searchInput) return;
 
-    // We search across Project cards, Skill elements, and Service cards
-    const searchables = [
-        { 
-            elements: document.querySelectorAll('.project-card'), 
-            textSelector: '.project-info h3, .project-info p, .project-tag' 
+    // Searchable groups: cards to dim/highlight + which children to mark text in
+    const searchGroups = [
+        {
+            selector: '.project-card',
+            highlightTargets: '.project-info h3, .project-info p, .project-tag'
         },
-        { 
-            elements: document.querySelectorAll('.circle-skill, .skill-bar'), 
-            textSelector: 'span, .skill-info span' 
+        {
+            selector: '.circle-skill',
+            highlightTargets: 'span:last-of-type'
         },
-        { 
-            elements: document.querySelectorAll('.service-card'), 
-            textSelector: 'h3, p' 
+        {
+            selector: '.skill-bar',
+            highlightTargets: '.skill-info span:first-child'
+        },
+        {
+            selector: '.service-card',
+            highlightTargets: 'h3, p'
         }
     ];
+
+    function clearHighlights(card) {
+        card.querySelectorAll('mark.search-highlight').forEach(m => {
+            const p = m.parentNode;
+            if (p) { p.replaceChild(document.createTextNode(m.innerText), m); p.normalize(); }
+        });
+    }
+
+    function applyHighlight(element, query) {
+        const escaped = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+        const regex = new RegExp(`(${escaped})`, 'gi');
+
+        const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null);
+        const textNodes = [];
+        let n;
+        while ((n = walker.nextNode())) textNodes.push(n);
+
+        textNodes.forEach(textNode => {
+            if (!regex.test(textNode.nodeValue)) return;
+            regex.lastIndex = 0;
+            const frag = document.createDocumentFragment();
+            let lastIndex = 0;
+            let match;
+            const val = textNode.nodeValue;
+            while ((match = regex.exec(val)) !== null) {
+                if (match.index > lastIndex) frag.appendChild(document.createTextNode(val.slice(lastIndex, match.index)));
+                const mark = document.createElement('mark');
+                mark.className = 'search-highlight';
+                mark.textContent = match[0];
+                frag.appendChild(mark);
+                lastIndex = regex.lastIndex;
+            }
+            if (lastIndex < val.length) frag.appendChild(document.createTextNode(val.slice(lastIndex)));
+            textNode.parentNode.replaceChild(frag, textNode);
+        });
+    }
 
     function performSearch() {
         const query = searchInput.value.toLowerCase().trim();
 
-        if (query === '') {
-            // Reset highlighting & display
-            searchables.forEach(group => {
-                group.elements.forEach(el => {
-                    el.style.opacity = '1';
-                    el.style.transform = 'scale(1)';
-                    el.style.boxShadow = '';
-                    // Clean up highlights in specific text elements
-                    const textNodes = el.querySelectorAll(group.textSelector);
-                    if (textNodes.length > 0) {
-                        textNodes.forEach(node => removeHighlights(node));
-                    } else {
-                        removeHighlights(el);
-                    }
-                });
-            });
-            return;
-        }
+        searchGroups.forEach(group => {
+            document.querySelectorAll(group.selector).forEach(card => {
+                clearHighlights(card);
 
-        searchables.forEach(group => {
-            group.elements.forEach(el => {
-                const textNodes = el.querySelectorAll(group.textSelector);
-                let content = '';
-                
-                textNodes.forEach(node => {
-                    content += ' ' + node.innerText.toLowerCase();
-                });
-
-                // Fallback to card's inner text if no selectors matched
-                if (textNodes.length === 0) {
-                    content = el.innerText.toLowerCase();
+                if (query === '') {
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                    card.style.boxShadow = '';
+                    return;
                 }
 
-                if (content.includes(query)) {
-                    el.style.opacity = '1';
-                    el.style.transform = 'scale(1.02)';
-                    el.style.boxShadow = '0 0 15px rgba(255, 159, 67, 0.4)';
-                    
-                    // Highlight ONLY inside leaf text nodes to protect parent event listeners (modal buttons, SVGs)
-                    textNodes.forEach(node => {
-                        highlightText(node, query);
-                    });
+                const matches = card.innerText.toLowerCase().includes(query);
+
+                if (matches) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1.02)';
+                    card.style.boxShadow = '0 0 18px rgba(255, 159, 67, 0.5)';
+                    card.querySelectorAll(group.highlightTargets).forEach(node => applyHighlight(node, query));
                 } else {
-                    el.style.opacity = '0.4';
-                    el.style.transform = 'scale(0.96)';
-                    el.style.boxShadow = '';
-                    
-                    textNodes.forEach(node => {
-                        removeHighlights(node);
-                    });
+                    card.style.opacity = '0.35';
+                    card.style.transform = 'scale(0.97)';
+                    card.style.boxShadow = '';
                 }
             });
         });
     }
 
     searchInput.addEventListener('input', performSearch);
+    searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); performSearch(); } });
     if (searchBtn) {
-        searchBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            performSearch();
-        });
-    }
-
-    function highlightText(element, query) {
-        removeHighlights(element);
-        const innerHTML = element.innerHTML;
-        // Escape query regex chars
-        const escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-        const regex = new RegExp(`(${escapedQuery})`, 'gi');
-        
-        // Match only plain text, not html tags
-        const newHTML = innerHTML.replace(/(?![^<]*>)([^<]+)/g, (match) => {
-            return match.replace(regex, '<mark class="search-highlight">$1</mark>');
-        });
-        element.innerHTML = newHTML;
-    }
-
-    function removeHighlights(element) {
-        const highlights = element.querySelectorAll('mark.search-highlight');
-        highlights.forEach(h => {
-            const parent = h.parentNode;
-            if (parent) {
-                parent.replaceChild(document.createTextNode(h.innerText), h);
-                parent.normalize();
-            }
-        });
+        searchBtn.addEventListener('click', e => { e.preventDefault(); performSearch(); });
     }
 }
 

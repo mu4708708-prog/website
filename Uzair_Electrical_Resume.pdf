@@ -6,47 +6,98 @@ endobj
 << /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F 4 0 R /Fb 5 0 R >> >> /Contents 6 0 R >>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
 endobj
 5 0 obj
-<< /Length 250 >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 6335 >>
 stream
-BT
-/F1 24 Tf
-70 700 Td
-(Muhammad Uzair) Tj
-/F1 14 Tf
-0 -30 Td
-(Electrical Engineer) Tj
-/F1 12 Tf
-0 -40 Td
-(This is a placeholder for your actual resume PDF.) Tj
-0 -20 Td
-(Please replace this file in your project folder with your real CV.) Tj
-0 -20 Td
-(Keep the filename as 'Uzair_Electrical_Resume.pdf' so the) Tj
-0 -20 Td
-(download links on your website work seamlessly.) Tj
-0 -40 Td
-(Email: mu4708708@gmail.com) Tj
-0 -20 Td
-(Phone: +92-318-8822143) Tj
-ET
+0.06 0.07 0.08 rg 0 755 595 87 re f
+BT /Fb 24 Tf 1 1 1 rg 40 803 Td (Muhammad Uzair) Tj ET
+BT /F 12 Tf 1.00 0.62 0.26 rg 40 785 Td (Electrical Engineer  |  Embedded Systems  |  Industrial Automation) Tj ET
+BT /F 8.5 Tf 1 1 1 rg 350 815 Td (mu4708708@gmail.com) Tj ET
+BT /F 8.5 Tf 1 1 1 rg 350 803 Td (+92-318-8822143) Tj ET
+BT /F 8.5 Tf 1 1 1 rg 350 791 Td (Faisalabad, Punjab, Pakistan) Tj ET
+BT /F 8.5 Tf 1 1 1 rg 350 779 Td (linkedin.com/in/Muhammad-uzair863568253) Tj ET
+BT /F 8.5 Tf 1 1 1 rg 350 767 Td (GitHub: mu4708708-prog) Tj ET
+1.00 0.62 0.26 rg 40 742 515 19 re f
+BT /Fb 10 Tf 1 1 1 rg 48 748 Td (PROFESSIONAL SUMMARY) Tj ET
+BT /F 9.5 Tf 0.06 0.07 0.08 rg 40 717 Td (Electrical Engineering graduate \(FAST-NUCES, 2022-2026\) with hands-on experience in instrumentation,) Tj ET
+BT /F 9.5 Tf 0.06 0.07 0.08 rg 40 704 Td (control systems, embedded electronics, IoT, and industrial automation. Worked on academic and) Tj ET
+BT /F 9.5 Tf 0.06 0.07 0.08 rg 40 691 Td (real-world projects involving microcontrollers, simulation tools, PLC programming, and ML applications.) Tj ET
+1.00 0.62 0.26 rg 40 669 515 19 re f
+BT /Fb 10 Tf 1 1 1 rg 48 675 Td (EDUCATION) Tj ET
+BT /Fb 10 Tf 0.06 0.07 0.08 rg 40 644 Td (Bachelor of Electrical Engineering) Tj ET
+BT /F 10 Tf 1.00 0.62 0.26 rg 40 631 Td (FAST-NUCES  |  Chiniot-Faisalabad Campus) Tj ET
+BT /F 9 Tf 0.67 0.73 0.76 rg 40 620 Td (2022 - 2026   Chiniot-Faisalabad, Pakistan) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 609 Td (Studied control systems, instrumentation, embedded systems, power electronics and DSP.) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 598 Td (Active IEEE member; participated in project exhibitions and engineering competitions.) Tj ET
+BT /Fb 10 Tf 0.06 0.07 0.08 rg 40 582 Td (F.Sc Pre-Engineering) Tj ET
+BT /F 10 Tf 1.00 0.62 0.26 rg 40 569 Td (Government Post Graduate College, Sahiwal) Tj ET
+BT /F 9 Tf 0.67 0.73 0.76 rg 40 558 Td (2020 - 2022   Sahiwal, Punjab, Pakistan) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 547 Td (Focus: Physics, Chemistry, Mathematics) Tj ET
+1.00 0.62 0.26 rg 40 527 515 19 re f
+BT /Fb 10 Tf 1 1 1 rg 48 533 Td (PROFESSIONAL EXPERIENCE) Tj ET
+BT /Fb 10 Tf 0.06 0.07 0.08 rg 40 502 Td (Electrical Intern) Tj ET
+BT /F 10 Tf 1.00 0.62 0.26 rg 40 489 Td (Shaukat Khanum Memorial Cancer Hospital and Research Centre) Tj ET
+BT /F 9 Tf 0.67 0.73 0.76 rg 40 478 Td (July 2025  |  4 Weeks  |  Lahore, Pakistan) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 48 467 Td (- Assisted in maintenance and troubleshooting of laboratory machines and electrical systems.) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 48 455 Td (- Practical exposure to instrumentation, preventive maintenance and calibration procedures.) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 48 443 Td (- Applied laboratory safety standards and equipment handling protocols.) Tj ET
+BT /Fb 10 Tf 0.06 0.07 0.08 rg 40 421 Td (Electrical and Instrumentation Intern) Tj ET
+BT /F 10 Tf 1.00 0.62 0.26 rg 40 408 Td (Ibrahim Fiber Limited) Tj ET
+BT /F 9 Tf 0.67 0.73 0.76 rg 40 397 Td (June 2025  |  4 Weeks  |  Faisalabad, Pakistan) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 48 386 Td (- Assisted in installation, calibration and maintenance of industrial instruments.) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 48 374 Td (- Practical exposure to control systems, sensors and signal transmitters.) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 48 362 Td (- Supported engineers in monitoring automated production line processes.) Tj ET
+1.00 0.62 0.26 rg 40 337 515 19 re f
+BT /Fb 10 Tf 1 1 1 rg 48 343 Td (KEY PROJECTS) Tj ET
+BT /Fb 9.5 Tf 1.00 0.62 0.26 rg 40 312 Td (Intelligent Fault-Tolerant Sensor Assembly \(IFTSA\) - Final Year Project) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 300 Td (ML-based smart sensor system that detects, isolates and compensates sensor faults in real-time.) Tj ET
+BT /F 8.5 Tf 0.67 0.73 0.76 rg 40 289 Td (Tools: MATLAB, Jupyter Notebook, Proteus  |  Skills: ML, redundant sensors, embedded control) Tj ET
+BT /Fb 9.5 Tf 1.00 0.62 0.26 rg 40 274 Td (IoT Water Level Monitor) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 262 Td (Remote water-level tracking via ESP32 + HC-SR04 ultrasonic sensor, streamed over WiFi/MQTT.) Tj ET
+BT /F 8.5 Tf 0.67 0.73 0.76 rg 40 251 Td (Tools: Arduino IDE  |  Skills: IoT, ESP32, wireless telemetry, real-time dashboards) Tj ET
+BT /Fb 9.5 Tf 1.00 0.62 0.26 rg 40 236 Td (DC-DC Boost Converter with Microcontroller Control) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 224 Td (High-efficiency boost converter with MCU feedback loop and PWM regulation, simulated in Proteus.) Tj ET
+BT /F 8.5 Tf 0.67 0.73 0.76 rg 40 213 Td (Tools: Proteus, Multisim, MATLAB  |  Skills: Power electronics, analog circuits) Tj ET
+BT /Fb 9.5 Tf 1.00 0.62 0.26 rg 40 198 Td (Traffic Light Control System using PLC and HMI) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 186 Td (Automated traffic junction controller using PLC ladder logic and HMI display in TIA Portal.) Tj ET
+BT /F 8.5 Tf 0.67 0.73 0.76 rg 40 175 Td (Tools: Siemens TIA Portal  |  Skills: PLC, SCADA, HMI, industrial automation) Tj ET
+1.00 0.62 0.26 rg 40 157 515 19 re f
+BT /Fb 10 Tf 1 1 1 rg 48 163 Td (TECHNICAL SKILLS) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 132 Td (- Embedded Systems: Arduino, ESP32, Raspberry Pi) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 119 Td (- PLC Programming: TIA Portal, Ladder Logic, SCADA) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 106 Td (- Circuit Design: Proteus, Multisim, PCB Prototyping) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 40 93 Td (- Power Electronics: Boost/Buck converters, PWM) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 300 132 Td (- IoT: WiFi, MQTT, Sensor Networks) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 300 119 Td (- Tools: MATLAB, AutoCAD, Vivado, LabVIEW, VS Code) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 300 106 Td (- Machine Learning: Python, Jupyter Notebook, scikit-learn) Tj ET
+BT /F 9 Tf 0.06 0.07 0.08 rg 300 93 Td (- Soft Skills: Documentation, teamwork, problem-solving) Tj ET
+1.00 0.62 0.26 rg 40 69 515 19 re f
+BT /Fb 10 Tf 1 1 1 rg 48 75 Td (CERTIFICATIONS AND ACHIEVEMENTS) Tj ET
+BT /F 9.5 Tf 0.06 0.07 0.08 rg 40 44 Td (- Instrumentation and Control  |  Industrial Automation Control - Inst Tools) Tj ET
+BT /F 9.5 Tf 0.06 0.07 0.08 rg 40 30 Td (- IEEE Executive Member  |  IEEE Student Branch, FAST-CFD) Tj ET
+BT /F 9.5 Tf 0.06 0.07 0.08 rg 40 16 Td (- Speed Wiring Competition Winner  |  IEEE Speed Wiring Competition 2024) Tj ET
+
 endstream
 endobj
 xref
-0 6
+0 7
 0000000000 65535 f
 0000000009 00000 n
 0000000058 00000 n
 0000000115 00000 n
-0000000242 00000 n
-0000000313 00000 n
+0000000250 00000 n
+0000000347 00000 n
+0000000449 00000 n
 trailer
-<< /Size 6 /Root 1 0 R >>
+<< /Size 7 /Root 1 0 R >>
 startxref
-618
+6836
 %%EOF
