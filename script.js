@@ -682,11 +682,20 @@ function initLiveSearch() {
 
     if (!searchInput) return;
 
-    // We search across Project cards, Skill tags, and Service titles
+    // We search across Project cards, Skill elements, and Service cards
     const searchables = [
-        { elements: document.querySelectorAll('.project-card'), textSelector: 'h3, p, .project-tag' },
-        { elements: document.querySelectorAll('.skill-card, .skill-box'), textSelector: 'h3, span' },
-        { elements: document.querySelectorAll('.service-card'), textSelector: 'h3, p' }
+        { 
+            elements: document.querySelectorAll('.project-card'), 
+            textSelector: '.project-info h3, .project-info p, .project-tag' 
+        },
+        { 
+            elements: document.querySelectorAll('.circle-skill, .skill-bar'), 
+            textSelector: 'span, .skill-info span' 
+        },
+        { 
+            elements: document.querySelectorAll('.service-card'), 
+            textSelector: 'h3, p' 
+        }
     ];
 
     function performSearch() {
@@ -699,7 +708,13 @@ function initLiveSearch() {
                     el.style.opacity = '1';
                     el.style.transform = 'scale(1)';
                     el.style.boxShadow = '';
-                    removeHighlights(el);
+                    // Clean up highlights in specific text elements
+                    const textNodes = el.querySelectorAll(group.textSelector);
+                    if (textNodes.length > 0) {
+                        textNodes.forEach(node => removeHighlights(node));
+                    } else {
+                        removeHighlights(el);
+                    }
                 });
             });
             return;
@@ -707,20 +722,35 @@ function initLiveSearch() {
 
         searchables.forEach(group => {
             group.elements.forEach(el => {
-                const textContainer = el.querySelector(group.textSelector) || el;
-                const content = textContainer.innerText.toLowerCase();
+                const textNodes = el.querySelectorAll(group.textSelector);
+                let content = '';
+                
+                textNodes.forEach(node => {
+                    content += ' ' + node.innerText.toLowerCase();
+                });
+
+                // Fallback to card's inner text if no selectors matched
+                if (textNodes.length === 0) {
+                    content = el.innerText.toLowerCase();
+                }
 
                 if (content.includes(query)) {
                     el.style.opacity = '1';
                     el.style.transform = 'scale(1.02)';
                     el.style.boxShadow = '0 0 15px rgba(255, 159, 67, 0.4)';
-                    // Simple inline highlighting simulation
-                    highlightText(textContainer, query);
+                    
+                    // Highlight ONLY inside leaf text nodes to protect parent event listeners (modal buttons, SVGs)
+                    textNodes.forEach(node => {
+                        highlightText(node, query);
+                    });
                 } else {
                     el.style.opacity = '0.4';
                     el.style.transform = 'scale(0.96)';
                     el.style.boxShadow = '';
-                    removeHighlights(textContainer);
+                    
+                    textNodes.forEach(node => {
+                        removeHighlights(node);
+                    });
                 }
             });
         });
@@ -752,8 +782,10 @@ function initLiveSearch() {
         const highlights = element.querySelectorAll('mark.search-highlight');
         highlights.forEach(h => {
             const parent = h.parentNode;
-            parent.replaceChild(document.createTextNode(h.innerText), h);
-            parent.normalize();
+            if (parent) {
+                parent.replaceChild(document.createTextNode(h.innerText), h);
+                parent.normalize();
+            }
         });
     }
 }
